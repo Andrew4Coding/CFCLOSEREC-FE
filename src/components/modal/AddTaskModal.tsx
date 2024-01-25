@@ -1,8 +1,6 @@
-import Image from "next/image"
-import { addModal, modalInterface} from "./interface"
+import { addModal } from "./interface"
 import { KeyboardEvent, useContext, useEffect, useState } from "react";
 import { dataContext } from "../modules/HomeModules";
-import { dataInterface } from "../modules/HomeModules/ModuleElements/interface";
 
 export const AddTaskModal: React.FC<addModal> = ({
     setOpenmodal,

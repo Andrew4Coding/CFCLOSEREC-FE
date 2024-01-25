@@ -1,13 +1,13 @@
 import Image from "next/image"
-import { profileModalInterface } from "./interface"
+import { modalInterface } from "./interface"
 
-export const ProfileModal: React.FC<profileModalInterface> = ({
-    setIsProfileModalOpen
+export const ProfileModal: React.FC<modalInterface> = ({
+    setOpenmodal
 }) => {
     return <main className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/30"
     onClick={(event) => {
         if (event.target === event.currentTarget) {
-            setIsProfileModalOpen(false)
+            setOpenmodal(false)
         }
     }}>
         <section className="bg-white min-w-[20rem] p-10 flex flex-col items-center" >

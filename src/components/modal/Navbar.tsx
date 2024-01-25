@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
                 isDrawerOpen && <Drawer />
             }
             {
-                isProfileModalOpen && <ProfileModal setIsProfileModalOpen={setIsProfileModalOpen} />
+                isProfileModalOpen && <ProfileModal setOpenmodal={setIsProfileModalOpen} />
             }
         </header>
     )
