@@ -95,7 +95,7 @@ export const EditTaskModal: React.FC<editModal> = ({
         if (cardTitle && cardDescription) {
             setError('')
         }
-    })
+    }, [cardTitle, cardDescription])
 
     return <main className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/30"
     onClick={(event) => {
