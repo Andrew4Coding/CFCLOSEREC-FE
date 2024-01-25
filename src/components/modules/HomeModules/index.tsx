@@ -1,8 +1,8 @@
 'use client'
 import React, { useEffect, useState } from "react"
-import { Background } from "./Sections/Background"
 import { Body } from "./Sections/Body"
 import { contextDataInterface, dataInterface } from "./ModuleElements/interface"
+
 
 const options = {
     data: {
@@ -40,7 +40,6 @@ export function HomeModule() {
 
     return (
      <div>
-        <Background />
         <dataContext.Provider value={{data: testData, setData: setTestData }}>
             <Body/>
         </dataContext.Provider>

@@ -1,9 +1,11 @@
 'use client'
-import { useContext, useEffect, useState } from "react"
-import { contextDataInterface, taskSectionInterface } from "./interface"
+import { useContext } from "react"
+import { taskSectionInterface } from "./interface"
 import { Card } from "./Card"
 import { dataContext } from ".."
 import {AddNewTaskButton} from "@/components/elements/AddNewTaskButton"
+import { ClearTaskButton } from "@/components/elements/ClearTaskButton"
+
 
 export const TaskSection: React.FC<taskSectionInterface> = ({
     type,
@@ -14,7 +16,10 @@ export const TaskSection: React.FC<taskSectionInterface> = ({
 
     return (
         <div className="flex-grow flex flex-col gap-2 text-white">
-            <h1 className="text-base">{title}</h1>
+            <div className="w-full flex gap-5">
+                <h1 className="text-base">{title}</h1>
+                <ClearTaskButton type={type}/>
+            </div>
             <section className="w-full h-full flex flex-col gap-3">
                 {
                     taskData.data[type].map((item, index) => {

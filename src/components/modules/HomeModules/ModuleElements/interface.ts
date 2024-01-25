@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
-
 export interface taskSectionInterface {
     type: "todo" | "ongoing" | "done",
     title: string,
